@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+
+% Sans serif
+\usepackage{caladea}
+\usepackage[T1]{fontenc}
+
+% Title spacing
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{3ex}{1ex}
+\titlespacing*{\subsection}{0pt}{2ex}{0pt}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+\titleformat{\subsection}{}{\thesubsection}{}{\bfseries\normalsize}
+\titleformat{\subsubsection}{}{\thesubsubsection}{}{\itshape\small}
+
+\usepackage{hyperref}
+\urlstyle{same}
+
+\setlength{\parindent}{0pt}
+
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+\usepackage[utf8]{inputenc}
+\usepackage[top=2.5cm,bottom=3cm,right=3cm,left=3cm]{geometry}
+%\usepackage[margin=3cm]{geometry}
+
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\pagenumbering{gobble}
+
+% Line height
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+\large
+\noindent\textbf{Sean Baildon}
+\hfill
+\noindent\textbf{Resume, \the\year}
+\normalsize
+
+\vspace{4ex}
+\hrulefill
+\vspace{3ex}
+
+% Use asterisk for unbalanced columns
+\begin{multicols*}{2}
+
+\section*{Employment}
+\subsection*{Software Engineer, BAE Systems}
+\subsubsection*{June 2015 - present}
+Multi-disciplinary software engineer working in defence, focusing on cross-domain solutions.
+\subsection*{Research Associate, Lancaster University}
+\subsubsection*{November 2014 - March 2015}
+Conducted research in the developing field of Software Defined Networks. We explored novel ideas utilising SDN's programmable control plane to improve quality of experience; instant packet re-routing, interaction with other SDN applications, and network scalability.
+\subsection*{Research Associate, Lancaster University}
+\subsubsection*{May 2014 - November 2014}
+Evaluated and assisted with the development of OpenCache, an SDN application developed at Lancaster University. We evaluated the benefit that OpenCache would bring to caching services by providing near-instant load balancing and fail-over recovery during HTTP adaptive streaming.
+
+\section*{Education}
+Computer Science, BSc\par
+First-class honours\par
+Lancaster University\par
+October 2011 - June 2014
+
+\section*{Skills}
+Versed in several programming languages; Python, Java, JavaScript. Some experience in Go, C, Rust, and Ruby.\medskip
+
+Primarily Linux/macOS background. Experienced with security critical software development. Strong knowledge of networking tools, protocols, and design.  Fluent with git.\medskip
+
+Automation, predictability, and system operations advocate.
+
+\section*{Publications}
+\textbf{OpenCache: A software-defined content caching platform}\par
+\url{http://ieeexplore.ieee.org/document/7116129/}
+
+\section*{Contact and Profiles}
+\noindent \begin{tabular}{@{}ll}
+email & \href{mailto:hello@baildon.co}{hello@baildon.co} \\
+web & \href{https://baildon.co}{baildon.co} \\
+github & \href{https://github.com/sbaildon}{github.com/sbaildon} \\
+twitter & \href{https://twitter.com/sbaildon}{twitter.com/sbaildon}
+\end{tabular}
+
+\vspace{4ex}
+\textit{References on request}
+
+\end{multicols*}
+
+\end{document}
