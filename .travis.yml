@@ -1,0 +1,4 @@
+before_install:
+  - sudo apt-get install -y texlive-latex-base
+script:
+  make
