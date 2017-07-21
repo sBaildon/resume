@@ -1,6 +1,5 @@
 before_install:
-- sudo apt-get install -y texlive-latex-base
-- sudo apt-get install -y texlive-fonts-extra
+- sudo apt-get install -y texlive-latex-base texlive-fonts-extra
 script: make
 deploy:
   provider: releases
