@@ -1,4 +1,7 @@
+sudo: required
+services: docker
 before_install:
+  - docker pull ubuntu:16.04
   - sudo apt-get update -y
   - sudo apt-get install -y texlive-latex-base texlive-fonts-extra
 script: make
