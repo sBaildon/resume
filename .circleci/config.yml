@@ -5,6 +5,7 @@ jobs:
       - image: ubuntu:16.04
     working_directory: ~/
     steps:
+      - checkout
       - run: apt-get update -y
       - run: apt-get install -y make
       - run: cd resume; make
