@@ -7,5 +7,4 @@ jobs:
     steps:
       - run: apt-get update -y
       - run: apt-get install -y make
-      - run: ls
-      - run: make
+      - run: cd resume; make
