@@ -7,5 +7,5 @@ jobs:
     steps:
       - checkout
       - run: apt-get update -y
-      - run: apt-get install -y make
+      - run: apt-get install -y make texlive-latex-base texlive-fonts-extra
       - run: cd resume; make
