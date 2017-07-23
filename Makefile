@@ -7,7 +7,7 @@ $(BUILD_DIR)/resume.pdf: $(SOURCE)
 	mkdir -p $(BUILD_DIR)
 	pdflatex \
 		-output-directory=$(BUILD_DIR) \
-		-output-formt=pdf \
+		-output-format=pdf \
 		-halt-on-error \
 		$(SOURCE)
 
