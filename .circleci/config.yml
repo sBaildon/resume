@@ -11,4 +11,3 @@ jobs:
       - run: make
       - store_artifacts:
           path: _build/resume.pdf
-          destination: somewhere
