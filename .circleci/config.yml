@@ -18,8 +18,7 @@ jobs:
             $GOPATH/bin/github-release upload \
               --user sbaildon \
               --repo resume \
-              --name `date %Y-%m-%d_%H-%M` \
+              --name `date +%Y-%m-%d_%H-%M` \
               --tag `date +%Y-%m-%d_%H-%M` \
-              --pre-release \
               --file _build/resume.pdf
 
