@@ -2,14 +2,22 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:16.04
+      - image: fedora:26
         environment:
-          GOPATH: $HOME/golang
+          GOPATH: /root/golang
     working_directory: ~/resume
     steps:
-      - run: apt-get update -y
-      - run: apt-get install -y git
+      - run: dnf install -y git make golang texlive-latex-bin texlive-scheme-basic texlive-titlesec texlive-blindtext texlive-caladea texlive-ec
       - checkout
+      - run: make
       - run: go get github.com/aktau/github-release
       - store_artifacts:
           path: _build/resume.pdf
+      - deploy:
+        command: |
+          $GOPATH/bin/github-release release
+            --user sbaildon
+            --repo resume
+            --name something
+            --pre-release
+
