@@ -14,10 +14,10 @@ jobs:
       - store_artifacts:
           path: _build/resume.pdf
       - deploy:
-        command: |
-          $GOPATH/bin/github-release release
-            --user sbaildon
-            --repo resume
-            --name something
-            --pre-release
+          command: |
+            $GOPATH/bin/github-release release
+              --user sbaildon
+              --repo resume
+              --name something
+              --pre-release
 
