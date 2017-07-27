@@ -15,10 +15,13 @@ jobs:
           path: _build/resume.pdf
       - deploy:
           command: |
+            $GOPATH/bin/github-release release \
+              --user sbaildon \
+              --repo resume \
+              --tag `date +%Y-%m-%d_%H-%M`
             $GOPATH/bin/github-release upload \
               --user sbaildon \
               --repo resume \
-              --name `date +%Y-%m-%d_%H-%M` \
               --tag `date +%Y-%m-%d_%H-%M` \
+              --name resume.pdf \
               --file _build/resume.pdf
-
