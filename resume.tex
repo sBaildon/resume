@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 % Sans serif
 \usepackage{caladea}
@@ -7,8 +7,8 @@
 % Title spacing
 \usepackage{titlesec}
 \titlespacing*{\section}{0pt}{3ex}{1ex}
-\titlespacing*{\subsection}{0pt}{2ex}{0pt}
-\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{4ex}{0pt}
+\titlespacing*{\subsubsection}{0pt}{0pt}{0.5em}
 \titleformat{\subsection}{}{\thesubsection}{}{\bfseries\normalsize}
 \titleformat{\subsubsection}{}{\thesubsubsection}{}{\itshape\small}
 
@@ -26,6 +26,10 @@
 
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
+
+% For list styling
+\usepackage{enumitem}
+\setitemize{itemsep=0em}
 
 \pagenumbering{gobble}
 
@@ -50,13 +54,25 @@
 \section*{Employment}
 \subsection*{Software Engineer, BAE Systems}
 \subsubsection*{June 2015 - present}
-Multi-disciplinary software engineer working in defence, focusing on cross-domain solutions.
-\subsection*{Research Associate, Lancaster University}
-\subsubsection*{November 2014 - March 2015}
-Conducted research in the developing field of Software Defined Networks. We explored novel ideas utilising SDN's programmable control plane to improve quality of experience; instant packet re-routing, interaction with other SDN applications, and network scalability.
-\subsection*{Research Associate, Lancaster University}
-\subsubsection*{May 2014 - November 2014}
-Evaluated and assisted with the development of OpenCache, an SDN application developed at Lancaster University. We evaluated the benefit that OpenCache would bring to caching services by providing near-instant load balancing and fail-over recovery during HTTP adaptive streaming.
+\begin{itemize}[leftmargin=*]
+	\item Designing and implementing secure software projects as part of a team
+	\item Working on security-critical distributed systems expected to handle 10k+ concurrent users
+	\item Focusing on Java development (see: \href{https://nifi.apache.org}{NiFi}), supplemented with Python, Ruby, JavaScript, and C++
+	\item Creating web-based user applications in TypeScript, React
+	\item Championing effective, long-term continuous integration and test frameworks
+	\item Assisting with creating and maintaining AWS deployments
+\end{itemize}
+
+\subsection*{Research Associate, Lancaster Univ.}
+\subsubsection*{May 2014 - March 2015}
+\begin{itemize}[leftmargin=*]
+	\item Evaluated performance and usability of \href{https://github.com/broadbent/opencache}{OpenCache}, a SDN HTTP caching platform
+	\item Developed a network load balancer in Python leveraging OpenCache's API
+	\item Contributed to research evaluating OpenCache's performance as a failover load balancer during HTTP adaptive streaming (\href{https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP}{MPEG-DASH})
+	\item Deployed OpenCache in a multi-region setup in the \href{https://www.fed4fire.eu}{Fed4FIRE} environment
+\end{itemize}
+
+\vfill\null
 
 \section*{Education}
 Computer Science, BSc\par
